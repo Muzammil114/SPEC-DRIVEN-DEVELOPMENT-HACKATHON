@@ -11,11 +11,11 @@ const config = {
   url: 'https://muzammil114.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages deployment, it is often '/<projectName>/'
-  baseUrl: '/physicalAIAndHumanoidRoboticBook/',
+  baseUrl: '/SPEC-DRIVEN-DEVELOPMENT-HACKATHON/',
 
   // GitHub pages deployment config.
   organizationName: 'Muzammil114', // Usually your GitHub org/user name.
-  projectName: 'physicalAIAndHumanoidRoboticBook', // Usually your repo name.
+  projectName: 'SPEC-DRIVEN-DEVELOPMENT-HACKATHON', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
