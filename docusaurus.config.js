@@ -10,8 +10,10 @@ const config = {
   // Set the production url of your site here
   url: 'https://physical-ai-humanoid-robotics-book.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For Vercel deployment, use '/' for root or adjust as needed
+  // For Vercel deployment, use '/' for root
   baseUrl: '/',
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  // baseUrl: '/SPEC-DRIVEN-DEVELOPMENT-HACKATHON/',
 
   // GitHub pages deployment config.
   organizationName: 'Muzammil114', // Usually your GitHub org/user name.
@@ -19,6 +21,7 @@ const config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  trailingSlash: false,
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
