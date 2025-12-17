@@ -8,14 +8,14 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://muzammil114.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/SPEC-DRIVEN-DEVELOPMENT-HACKATHON/',
 
   // GitHub pages deployment config.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Muzammil114', // Usually your GitHub org/user name.
+  projectName: 'SPEC-DRIVEN-DEVELOPMENT-HACKATHON', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -38,7 +38,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Muzammil114/SPEC-DRIVEN-DEVELOPMENT-HACKATHON/tree/main/',
         },
         blog: false, // Disable blog
         theme: {
@@ -58,6 +58,7 @@ const config = {
         logo: {
           alt: 'Physical AI & Humanoid Robotics Logo',
           src: 'img/logo.svg',
+          srcDark: 'img/logo-dark.svg',
         },
         items: [
           {
@@ -67,7 +68,7 @@ const config = {
             label: 'Textbook',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Muzammil114/SPEC-DRIVEN-DEVELOPMENT-HACKATHON',
             label: 'GitHub',
             position: 'right',
           },
@@ -98,11 +99,36 @@ const config = {
             ],
           },
           {
+            title: 'Resources',
+            items: [
+              {
+                label: 'Capstone Project',
+                to: '/docs/capstone',
+              },
+              {
+                label: 'Conclusion',
+                to: '/docs/conclusion',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/Muzammil114/SPEC-DRIVEN-DEVELOPMENT-HACKATHON',
+              },
+            ],
+          },
+          {
             title: 'More',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Physical AI & Robotics Community',
+                href: 'https://www.ros.org/',
+              },
+              {
+                label: 'NVIDIA Isaac',
+                href: 'https://developer.nvidia.com/isaac',
+              },
+              {
+                label: 'OpenAI',
+                href: 'https://openai.com',
               },
             ],
           },
@@ -112,6 +138,34 @@ const config = {
       prism: {
         theme: require('prism-react-renderer/themes/github'),
         darkTheme: require('prism-react-renderer/themes/dracula'),
+        additionalLanguages: ['python', 'bash', 'json', 'yaml', 'docker'],
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'YOUR_APP_ID',
+
+        // Public API key: it is safe to commit it
+        apiKey: 'YOUR_SEARCH_API_KEY',
+
+        indexName: 'spec-driven-development-hackathon',
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        replaceSearchResultPathname: {
+          from: '/docs/', // or as RegExp: /\/docs\//
+          to: '/',
+        },
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
       },
     }),
 };

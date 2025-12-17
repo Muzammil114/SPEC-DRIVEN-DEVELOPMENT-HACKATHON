@@ -1,7 +1,17 @@
-// @ts-check
+/**
+ * Creating a sidebar enables you to:
+ - create an ordered group of docs
+ - render navigation bar in docs
+ - provide next/previous navigation
+
+ The sidebars can be generated from the filesystem, or explicitly defined here.
+
+ Create as many sidebars as you want.
+ */
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
+  // By default, Docusaurus generates a sidebar from the docs folder structure
   tutorialSidebar: [
     'index',
     {
@@ -39,9 +49,7 @@ const sidebars = {
         'module-3/synthetic-data-generation',
         'module-3/isaac-ros-pipelines',
         'module-3/vslam-navigation',
-        'module-3/nav2-navigation',
-        'module-3/reinforcement-learning',
-        'module-3/sim-to-real-transfer',
+        'module-3/language-to-ros-actions',
         'module-3/module-3-exercises'
       ],
     },

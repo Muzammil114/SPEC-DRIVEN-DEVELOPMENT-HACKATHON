@@ -1,0 +1,463 @@
+/**
+ * Custom CSS for the Physical AI & Humanoid Robotics Textbook
+ */
+
+/* Custom color palette for Physical AI theme */
+:root {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-code-font-size: 95%;
+}
+
+/* Dark mode colors */
+[data-theme='dark'] {
+  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary-dark: #2563eb;
+  --ifm-color-primary-darker: #1d4ed8;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #60a5fa;
+  --ifm-color-primary-lighter: #93c5fd;
+  --ifm-color-primary-lightest: #bfdbfe;
+}
+
+/* Custom styling for robotics-themed elements */
+.hero--primary {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+}
+
+/* Styling for code blocks with robotics context */
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Custom styling for robotics diagrams and images */
+.ros-diagram {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  padding: var(--ifm-global-spacing);
+  margin: var(--ifm-global-spacing) 0;
+}
+
+/* Special styling for exercise and challenge boxes */
+.announcement {
+  border-left: 4px solid var(--ifm-color-primary);
+  background-color: rgba(var(--ifm-color-primary-rgb), 0.05);
+  padding: var(--ifm-global-spacing);
+  margin: var(--ifm-global-spacing) 0;
+  border-radius: 0 var(--ifm-global-radius) var(--ifm-global-radius) 0;
+}
+
+/* Styling for important robotics concepts */
+.important-concept {
+  background-color: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+[data-theme='dark'] .important-concept {
+  background-color: #fbbf2429;
+}
+
+/* Custom styling for robotics architecture diagrams */
+.architecture-diagram {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+[data-theme='dark'] .architecture-diagram {
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+/* Styling for robotics code examples */
+.ros-code-block {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+/* Special styling for simulation environment highlights */
+.simulation-highlight {
+  background-color: #dbeafe;
+  border-left: 4px solid #3b82f6;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+[data-theme='dark'] .simulation-highlight {
+  background-color: #1e3a8a29;
+}
+
+/* Custom styling for performance metrics tables */
+.performance-table th {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.performance-table td {
+  vertical-align: middle;
+}
+
+/* Responsive adjustments for robotics diagrams */
+@media (max-width: 768px) {
+  .architecture-diagram {
+    padding: 1rem;
+  }
+
+  .architectural-diagram pre {
+    font-size: 0.8rem;
+  }
+}
+
+/* Special styling for humanoid robotics content */
+.humanoid-section {
+  border: 2px dashed var(--ifm-color-primary-light);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  background-color: rgba(var(--ifm-color-primary-rgb), 0.02);
+}
+
+[data-theme='dark'] .humanoid-section {
+  background-color: rgba(var(--ifm-color-primary-rgb), 0.05);
+}
+
+/* Custom styling for physics simulation content */
+.physics-section {
+  border: 2px solid #10b981;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  background-color: #ecfdf5;
+}
+
+[data-theme='dark'] .physics-section {
+  background-color: #064e3b;
+  border-color: #059669;
+}
+
+/* Styling for AI/ML content sections */
+.ai-section {
+  border: 2px solid #8b5cf6;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  background-color: #f5f3ff;
+}
+
+[data-theme='dark'] .ai-section {
+  background-color: #3b0764;
+  border-color: #a78bfa;
+}
+
+/* Enhanced styling for navigation elements */
+.menu__list-item-collapsible:hover {
+  background-color: var(--ifm-menu-color-background-hover);
+}
+
+/* Custom styling for footer */
+.footer--dark {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* Special styling for callout boxes */
+.callout-caution {
+  border-left: 4px solid #ef4444;
+  background-color: #fee2e2;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+[data-theme='dark'] .callout-caution {
+  background-color: #7f1d1d;
+}
+
+.callout-tip {
+  border-left: 4px solid #10b981;
+  background-color: #d1fae5;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+[data-theme='dark'] .callout-tip {
+  background-color: #064e3b;
+}
+
+/* Custom styling for interactive elements */
+.button--secondary {
+  background-color: transparent;
+  border: 1px solid var(--ifm-button-color);
+}
+
+/* Enhanced table styling */
+.table-enhanced {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.table-enhanced th,
+.table-enhanced td {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.table-enhanced th {
+  background-color: var(--ifm-color-emphasis-100);
+  font-weight: bold;
+}
+
+/* Custom styling for image containers */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 0.5rem;
+}
+
+/* Styling for equation blocks */
+.equation-block {
+  text-align: center;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+/* Enhanced code block styling for different languages */
+.code-block-python {
+  border-left: 3px solid #3776ab;
+}
+
+.code-block-bash {
+  border-left: 3px solid #4e4e4e;
+}
+
+.code-block-xml {
+  border-left: 3px solid #0064bd;
+}
+
+.code-block-cpp {
+  border-left: 3px solid #00599c;
+}
+
+/* Custom styling for module introductions */
+.module-intro {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .module-intro {
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+}
+
+.module-intro h2 {
+  color: var(--ifm-color-primary);
+  margin-top: 0;
+}
+
+/* Styling for learning objectives */
+.learning-objectives {
+  background-color: #dbeafe;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid #2563eb;
+}
+
+[data-theme='dark'] .learning-objectives {
+  background-color: #1e3a8a;
+}
+
+.learning-objectives ul {
+  margin-bottom: 0;
+}
+
+.learning-objectives li {
+  margin-bottom: 0.25rem;
+}
+
+/* Custom styling for robotics simulation diagrams */
+.simulation-diagram {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+[data-theme='dark'] .simulation-diagram {
+  background-color: #1e293b;
+  border-color: #475569;
+}
+
+/* Enhanced styling for navigation sidebar */
+.sidebar-nav-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-nav-item:hover {
+  transform: translateX(2px);
+}
+
+/* Custom styling for important robotics equations */
+.physics-equation {
+  background-color: #fffbeb;
+  border-left: 4px solid #f59e0b;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+  font-family: 'Courier New', monospace;
+}
+
+[data-theme='dark'] .physics-equation {
+  background-color: #92400e;
+}
+
+/* Styling for robotics component diagrams */
+.component-diagram {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+[data-theme='dark'] .component-diagram {
+  background-color: #1e293b;
+  border-color: #475569;
+}
+
+/* Special styling for code examples with robotics context */
+.ros-code-example {
+  background-color: #f8fafc;
+  border-left: 4px solid var(--ifm-color-primary);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+  overflow-x: auto;
+}
+
+[data-theme='dark'] .ros-code-example {
+  background-color: #1e293b;
+}
+
+/* Custom styling for key concept highlights */
+.key-concept {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid #0ea5e9;
+}
+
+[data-theme='dark'] .key-concept {
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+}
+
+.key-concept h3 {
+  color: var(--ifm-color-primary-darker);
+  margin-top: 0;
+}
+
+/* Styling for comparison tables */
+.comparison-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.comparison-table th {
+  background-color: var(--ifm-color-emphasis-200);
+  font-weight: bold;
+}
+
+/* Custom styling for troubleshooting sections */
+.troubleshooting-section {
+  background-color: #fef2f2;
+  border-left: 4px solid #dc2626;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+[data-theme='dark'] .troubleshooting-section {
+  background-color: #7f1d1d;
+}
+
+/* Enhanced styling for note callouts */
+.note-callout {
+  background-color: #eff6ff;
+  border-left: 4px solid #2563eb;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+[data-theme='dark'] .note-callout {
+  background-color: #1e3a8a;
+}
+
+/* Styling for best practices sections */
+.best-practices {
+  background-color: #f0fdf4;
+  border-left: 4px solid #16a34a;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+[data-theme='dark'] .best-practices {
+  background-color: #14532d;
+}
+
+/* Custom styling for warning sections */
+.warning-section {
+  background-color: #fffbeb;
+  border-left: 4px solid #eab308;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+[data-theme='dark'] .warning-section {
+  background-color: #92400e;
+}
