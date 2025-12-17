@@ -49,7 +49,9 @@ const sidebars = {
         'module-3/synthetic-data-generation',
         'module-3/isaac-ros-pipelines',
         'module-3/vslam-navigation',
-        'module-3/language-to-ros-actions',
+        'module-3/nav2-navigation',
+        'module-3/reinforcement-learning',
+        'module-3/sim-to-real-transfer',
         'module-3/module-3-exercises'
       ],
     },

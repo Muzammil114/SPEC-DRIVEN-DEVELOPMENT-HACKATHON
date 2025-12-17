@@ -3,7 +3,13 @@
     "allow": [
       "Bash(git add .)",
       "Bash(git checkout -b main)",
-      "Bash(git push -u origin main)"
+      "Bash(git push -u origin main)",
+      "Bash(mkdir -p static/img)",
+      "Bash(npx docusaurus build)",
+      "Bash(npm install @docusaurus/core @docusaurus/preset-classic)",
+      "Bash(npm install prism-react-renderer)",
+      "Bash(npm install prism-react-renderer@^2.3.0)",
+      "Bash(npx docusaurus start)"
     ]
   }
 }

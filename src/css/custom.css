@@ -2,7 +2,7 @@
  * Custom CSS for the Physical AI & Humanoid Robotics Textbook
  */
 
-/* Custom color palette for Physical AI theme */
+/* Custom color palette for Physical AI theme - matching reference website style */
 :root {
   --ifm-color-primary: #2563eb;
   --ifm-color-primary-dark: #1d4ed8;
@@ -11,7 +11,19 @@
   --ifm-color-primary-light: #3b82f6;
   --ifm-color-primary-lighter: #60a5fa;
   --ifm-color-primary-lightest: #93c5fd;
+  --ifm-color-secondary: #64748b;
+  --ifm-color-secondary-dark: #475569;
+  --ifm-color-secondary-darker: #334155;
+  --ifm-color-secondary-darkest: #1e293b;
+  --ifm-color-secondary-light: #94a3b8;
+  --ifm-color-secondary-lighter: #cbd5e1;
+  --ifm-color-secondary-lightest: #e2e8f0;
   --ifm-code-font-size: 95%;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  --ifm-footer-background-color: #1e293b;
+  --ifm-hero-background-color: #f8fafc;
+  --ifm-hero-text-color: #1e293b;
 }
 
 /* Dark mode colors */
@@ -23,12 +35,214 @@
   --ifm-color-primary-light: #60a5fa;
   --ifm-color-primary-lighter: #93c5fd;
   --ifm-color-primary-lightest: #bfdbfe;
+  --ifm-color-secondary: #94a3b8;
+  --ifm-color-secondary-dark: #cbd5e1;
+  --ifm-color-secondary-darker: #e2e8f0;
+  --ifm-color-secondary-darkest: #f1f5f9;
+  --ifm-color-secondary-light: #64748b;
+  --ifm-color-secondary-lighter: #475569;
+  --ifm-color-secondary-lightest: #334155;
+  --ifm-navbar-background-color: #0f172a;
+  --ifm-footer-background-color: #0f172a;
+  --ifm-hero-background-color: #1e293b;
+  --ifm-hero-text-color: #e2e8f0;
 }
 
 /* Custom styling for robotics-themed elements */
 .hero--primary {
   background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
 }
+
+/* Enhanced navbar styling */
+.navbar {
+  background-color: var(--ifm-navbar-background-color);
+  box-shadow: var(--ifm-navbar-shadow);
+  padding: 0.75rem 0;
+}
+
+/* Enhanced footer styling */
+.footer {
+  background-color: var(--ifm-footer-background-color);
+}
+
+/* Enhanced hero section styling */
+.hero {
+  background-color: var(--ifm-hero-background-color);
+  color: var(--ifm-hero-text-color);
+  padding: 4rem 0;
+}
+
+[data-theme='dark'] .hero {
+  background-color: var(--ifm-hero-background-color);
+  color: var(--ifm-hero-text-color);
+}
+
+/* Enhanced card styling for modules */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced button styling */
+.button {
+  transition: all 0.2s ease;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+}
+
+.button--primary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Enhanced typography */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-weight: 600;
+}
+
+/* Enhanced code block styling */
+.code-block {
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* Enhanced table styling */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.markdown table th,
+.markdown table td {
+  padding: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+/* Enhanced sidebar styling */
+.menu {
+  padding: 1rem 0;
+}
+
+.menu__list-item-collapsible .menu__list {
+  margin-top: 0.25rem;
+}
+
+/* Enhanced doc article styling */
+.doc-article {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Enhanced container styling */
+.container {
+  padding: 2rem 1rem;
+}
+
+/* Enhanced grid layout for modules */
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Enhanced module card styling */
+.module-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.module-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.module-card__header {
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+}
+
+.module-card__body {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/* Enhanced content section styling */
+.content-section {
+  padding: 3rem 0;
+}
+
+/* Enhanced image styling */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced quote/blockquote styling */
+blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* Enhanced alert styling */
+.alert {
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.alert--info {
+  background-color: #dbeafe;
+  border-left-color: #3b82f6;
+}
+
+.alert--success {
+  background-color: #d1fae5;
+  border-left-color: #10b981;
+}
+
+.alert--warning {
+  background-color: #fef3c7;
+  border-left-color: #f59e0b;
+}
+
+.alert--danger {
+  background-color: #fee2e2;
+  border-left-color: #ef4444;
+}
+
+[data-theme='dark'] .alert--info { background-color: #1e3a8a; }
+[data-theme='dark'] .alert--success { background-color: #064e3b; }
+[data-theme='dark'] .alert--warning { background-color: #7f1d1d; }
+[data-theme='dark'] .alert--danger { background-color: #7f1d1d; }
 
 /* Styling for code blocks with robotics context */
 .docusaurus-highlight-code-line {

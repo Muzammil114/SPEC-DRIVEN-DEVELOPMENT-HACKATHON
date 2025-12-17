@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Physical AI Fundamentals',
-    // Using a placeholder since we don't have actual SVGs
+    Svg: null, // We'll use a placeholder since we don't have actual SVGs
     description: (
       <>
         Learn the foundational concepts of Physical AI, where artificial intelligence
@@ -15,6 +15,7 @@ const FeatureList = [
   },
   {
     title: 'Humanoid Robotics',
+    Svg: null,
     description: (
       <>
         Master the design and control of humanoid robots with advanced locomotion,
@@ -24,6 +25,7 @@ const FeatureList = [
   },
   {
     title: 'Simulation to Reality',
+    Svg: null,
     description: (
       <>
         Bridge the reality gap with advanced sim-to-real transfer techniques
@@ -36,9 +38,11 @@ const FeatureList = [
 function Feature({title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+      <div className={clsx('card', styles.featureCard)}>
+        <div className="card__body text--center">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
       </div>
     </div>
   );

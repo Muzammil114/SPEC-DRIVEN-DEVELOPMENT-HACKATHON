@@ -11,11 +11,11 @@ const config = {
   url: 'https://muzammil114.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages deployment, it is often '/<projectName>/'
-  baseUrl: '/SPEC-DRIVEN-DEVELOPMENT-HACKATHON/',
+  baseUrl: '/physicalAIAndHumanoidRoboticBook/',
 
   // GitHub pages deployment config.
   organizationName: 'Muzammil114', // Usually your GitHub org/user name.
-  projectName: 'SPEC-DRIVEN-DEVELOPMENT-HACKATHON', // Usually your repo name.
+  projectName: 'physicalAIAndHumanoidRoboticBook', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -136,8 +136,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Textbook. Built with Docusaurus.`,
       },
       prism: {
-        theme: require('prism-react-renderer/themes/github'),
-        darkTheme: require('prism-react-renderer/themes/dracula'),
+        theme: require('prism-react-renderer').themes.github,
+        darkTheme: require('prism-react-renderer').themes.dracula,
         additionalLanguages: ['python', 'bash', 'json', 'yaml', 'docker'],
       },
       algolia: {
