@@ -8,10 +8,10 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://muzammil114.github.io',
+  url: 'https://physical-ai-humanoid-robotics-book.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub Pages deployment, it is often '/<projectName>/'
-  baseUrl: '/SPEC-DRIVEN-DEVELOPMENT-HACKATHON/',
+  // For Vercel deployment, use '/' for root or adjust as needed
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   organizationName: 'Muzammil114', // Usually your GitHub org/user name.
