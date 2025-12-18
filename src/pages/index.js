@@ -18,7 +18,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Start Learning Physical AI & Robotics
+            Start Learning Physical AI & Robotics: &#x27F6
           </Link>
         </div>
       </div>
