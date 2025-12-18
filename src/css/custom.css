@@ -4,48 +4,56 @@
 
 /* Custom color palette for Physical AI theme - matching reference website style */
 :root {
-  --ifm-color-primary: #2563eb;
+  --ifm-color-primary: #2563eb; /* Circuit Blue - Headings/Logic */
   --ifm-color-primary-dark: #1d4ed8;
   --ifm-color-primary-darker: #1e40af;
   --ifm-color-primary-darkest: #1e3a8a;
   --ifm-color-primary-light: #3b82f6;
   --ifm-color-primary-lighter: #60a5fa;
   --ifm-color-primary-lightest: #93c5fd;
-  --ifm-color-secondary: #64748b;
+  --ifm-color-secondary: #64748b; /* Machined Steel - Secondary Accent */
   --ifm-color-secondary-dark: #475569;
   --ifm-color-secondary-darker: #334155;
   --ifm-color-secondary-darkest: #1e293b;
   --ifm-color-secondary-light: #94a3b8;
   --ifm-color-secondary-lighter: #cbd5e1;
   --ifm-color-secondary-lightest: #e2e8f0;
+  --ifm-color-text: #1f2937; /* Deep Charcoal - Primary Text */
+  --ifm-color-background: #f9fafb; /* Off-White/Paper - Primary Background */
   --ifm-code-font-size: 95%;
-  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-background-color: #f9fafb; /* Off-White/Paper - Primary Background */
   --ifm-navbar-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  --ifm-footer-background-color: #1e293b;
-  --ifm-hero-background-color: #f8fafc;
-  --ifm-hero-text-color: #1e293b;
+  --ifm-footer-background-color: #64748b; /* Machined Steel - Secondary Accent */
+  --ifm-hero-background-color: #f9fafb; /* Off-White/Paper - Primary Background */
+  --ifm-hero-text-color: #1f2937; /* Deep Charcoal - Primary Text */
+  --ifm-alert-background-color-warning: #fffbeb; /* Synapse Orange - Highlight Accent background */
+  --ifm-alert-border-color-warning: #f59e0b; /* Synapse Orange - Highlight Accent border */
 }
 
 /* Dark mode colors */
 [data-theme='dark'] {
-  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary: #3b82f6; /* Circuit Blue - Headings/Logic (lighter in dark mode) */
   --ifm-color-primary-dark: #2563eb;
   --ifm-color-primary-darker: #1d4ed8;
   --ifm-color-primary-darkest: #1e3a8a;
   --ifm-color-primary-light: #60a5fa;
   --ifm-color-primary-lighter: #93c5fd;
   --ifm-color-primary-lightest: #bfdbfe;
-  --ifm-color-secondary: #94a3b8;
+  --ifm-color-secondary: #94a3b8; /* Machined Steel - Secondary Accent (lighter in dark mode) */
   --ifm-color-secondary-dark: #cbd5e1;
   --ifm-color-secondary-darker: #e2e8f0;
   --ifm-color-secondary-darkest: #f1f5f9;
   --ifm-color-secondary-light: #64748b;
   --ifm-color-secondary-lighter: #475569;
   --ifm-color-secondary-lightest: #334155;
-  --ifm-navbar-background-color: #0f172a;
-  --ifm-footer-background-color: #0f172a;
-  --ifm-hero-background-color: #1e293b;
-  --ifm-hero-text-color: #e2e8f0;
+  --ifm-color-text: #e2e8f0; /* Lighter text for dark mode */
+  --ifm-color-background: #1e293b; /* Dark background for dark mode */
+  --ifm-navbar-background-color: #1e293b; /* Dark background */
+  --ifm-footer-background-color: #334155; /* Machined Steel - Secondary Accent (darker in dark mode) */
+  --ifm-hero-background-color: #1e293b; /* Dark background */
+  --ifm-hero-text-color: #e2e8f0; /* Lighter text for dark mode */
+  --ifm-alert-background-color-warning: #92400e; /* Synapse Orange - Highlight Accent background (darker in dark mode) */
+  --ifm-alert-border-color-warning: #fbbf24; /* Synapse Orange - Highlight Accent border (lighter in dark mode) */
 }
 
 /* Custom styling for robotics-themed elements */
@@ -230,8 +238,8 @@ blockquote {
 }
 
 .alert--warning {
-  background-color: #fef3c7;
-  border-left-color: #f59e0b;
+  background-color: var(--ifm-alert-background-color-warning);
+  border-left-color: var(--ifm-alert-border-color-warning);
 }
 
 .alert--danger {
@@ -275,21 +283,21 @@ blockquote {
 
 /* Styling for important robotics concepts */
 .important-concept {
-  background-color: #fef3c7;
-  border-left: 4px solid #f59e0b;
+  background-color: var(--ifm-alert-background-color-warning);
+  border-left: 4px solid var(--ifm-alert-border-color-warning);
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
 [data-theme='dark'] .important-concept {
-  background-color: #fbbf2429;
+  background-color: var(--ifm-alert-background-color-warning);
 }
 
 /* Custom styling for robotics architecture diagrams */
 .architecture-diagram {
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background-color: var(--ifm-color-background);
+  border: 1px solid var(--ifm-color-secondary-light);
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin: 1.5rem 0;
@@ -297,8 +305,8 @@ blockquote {
 }
 
 [data-theme='dark'] .architecture-diagram {
-  background-color: #1e293b;
-  border-color: #334155;
+  background-color: var(--ifm-color-background);
+  border-color: var(--ifm-color-secondary-darkest);
 }
 
 /* Styling for robotics code examples */
@@ -521,8 +529,8 @@ blockquote {
 
 /* Custom styling for robotics simulation diagrams */
 .simulation-diagram {
-  background-color: #f8fafc;
-  border: 1px solid #cbd5e1;
+  background-color: var(--ifm-color-background);
+  border: 1px solid var(--ifm-color-secondary-lighter);
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin: 1.5rem 0;
@@ -530,8 +538,8 @@ blockquote {
 }
 
 [data-theme='dark'] .simulation-diagram {
-  background-color: #1e293b;
-  border-color: #475569;
+  background-color: var(--ifm-color-background);
+  border-color: var(--ifm-color-secondary-darker);
 }
 
 /* Enhanced styling for navigation sidebar */
@@ -545,8 +553,8 @@ blockquote {
 
 /* Custom styling for important robotics equations */
 .physics-equation {
-  background-color: #fffbeb;
-  border-left: 4px solid #f59e0b;
+  background-color: var(--ifm-alert-background-color-warning);
+  border-left: 4px solid var(--ifm-alert-border-color-warning);
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 0 0.25rem 0.25rem 0;
@@ -554,7 +562,7 @@ blockquote {
 }
 
 [data-theme='dark'] .physics-equation {
-  background-color: #92400e;
+  background-color: var(--ifm-alert-background-color-warning);
 }
 
 /* Styling for robotics component diagrams */
@@ -568,13 +576,13 @@ blockquote {
 }
 
 [data-theme='dark'] .component-diagram {
-  background-color: #1e293b;
-  border-color: #475569;
+  background-color: var(--ifm-color-background);
+  border-color: var(--ifm-color-secondary-darker);
 }
 
 /* Special styling for code examples with robotics context */
 .ros-code-example {
-  background-color: #f8fafc;
+  background-color: var(--ifm-color-background);
   border-left: 4px solid var(--ifm-color-primary);
   padding: 1rem;
   margin: 1rem 0;
@@ -583,7 +591,7 @@ blockquote {
 }
 
 [data-theme='dark'] .ros-code-example {
-  background-color: #1e293b;
+  background-color: var(--ifm-color-background);
 }
 
 /* Custom styling for key concept highlights */
